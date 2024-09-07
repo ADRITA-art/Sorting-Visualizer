@@ -18,43 +18,43 @@ const Visualizer = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-gray-800 p-4">
+    <div className="flex flex-col items-center justify-center h-screen bg-custom-light-purple p-4">
       <div className="flex space-x-4 mb-8">
-        <button className="bg-blue-500 text-white px-4 py-2 rounded" onClick={generateArray}>
+        <button className="bg-generate-array text-white px-4 py-2 rounded border border-border-color" onClick={generateArray}>
           Generate Array
         </button>
         <button
-          className="bg-green-500 text-white px-4 py-2 rounded"
+          className="bg-bubble text-white px-4 py-2 rounded border border-border-color"
           onClick={() => bubbleSort(array, speed, setArray)}
         >
           Bubble Sort
         </button>
         <button
-          className="bg-purple-500 text-white px-4 py-2 rounded"
+          className="bg-insertion text-white px-4 py-2 rounded border border-border-color"
           onClick={() => insertionSort(array, speed, setArray)}
         >
           Insertion Sort
         </button>
         <button
-          className="bg-yellow-500 text-white px-4 py-2 rounded"
+          className="bg-selection text-white px-4 py-2 rounded border border-border-color"
           onClick={() => selectionSort(array, speed, setArray)}
         >
           Selection Sort
         </button>
         <button
-          className="bg-red-500 text-white px-4 py-2 rounded"
+          className="bg-merge text-white px-4 py-2 rounded border border-border-color"
           onClick={() => mergeSort(array, 0, array.length - 1, speed, setArray)}
         >
           Merge Sort
         </button>
         <button
-          className="bg-orange-500 text-white px-4 py-2 rounded"
+          className="bg-orange-500 text-white px-4 py-2 rounded border border-border-color"
           onClick={() => quickSort(array, 0, array.length - 1, speed, setArray)}
         >
           Quick Sort
         </button>
         <button
-          className="bg-teal-500 text-white px-4 py-2 rounded"
+          className="bg-teal-500 text-white px-4 py-2 rounded border border-border-color"
           onClick={() => heapSort(array, speed, setArray)}
         >
           Heap Sort
@@ -64,7 +64,7 @@ const Visualizer = () => {
         {array.map((value, idx) => (
           <div
             key={idx}
-            className="bg-blue-300 text-white text-center"
+            className="bg-bar-color text-white text-center"
             style={{ height: `${value * 5}px`, width: '30px' }}
           >
             {value}
